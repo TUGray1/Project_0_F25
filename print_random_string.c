@@ -16,7 +16,14 @@ char* rand_string_alloc(size_t size)
      return s;
 }
 
-
+void rand_string(char *s, size_t size){
+   char letters[] = "qwertyuiopasdfghjklzxcvbnm";
+   for(size_t i = 0; i < size; i++){
+       int index = rand() % (int)(sizeof(charset) - 1);
+       random index s[i] = charset[index];
+   }
+   s[size] = '\0';
+}
 
 int main()
 
