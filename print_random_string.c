@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-
+void rand_string(char *s, size_t size);
 
 // random string generator wrapper function
 char* rand_string_alloc(size_t size)
@@ -19,8 +19,8 @@ char* rand_string_alloc(size_t size)
 void rand_string(char *s, size_t size){
    char letters[] = "qwertyuiopasdfghjklzxcvbnm";
    for(size_t i = 0; i < size; i++){
-       int index = rand() % (int)(sizeof(charset) - 1);
-       random index s[i] = charset[index];
+       int index = rand() % (int)(sizeof(letters) - 1);
+       s[i] = letters[index];
    }
    s[size] = '\0';
 }
@@ -29,7 +29,7 @@ int main()
 
 {
     char *str;
-    size_t size =   ;  //specify a value for size of word
+    size_t size =  5 ;  //specify a value for size of word
 
 	/* seed the randomizer */
 	srand( (unsigned)time(NULL) );
